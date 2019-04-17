@@ -18,6 +18,8 @@ app = Flask(__name__)
 
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 # ^^^ links with env file; ^^^if fork, can run based off computer
+# FLASK_APP = os.environ.get("FLASK_APP")
+# FLASK_ENV = os.environ.get("FLASK_ENV")
 
 
 @app.route("/")
