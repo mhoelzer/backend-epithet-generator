@@ -9,18 +9,24 @@ This is in Python3
 __author__ = "mhoelzer"
 
 from flask import Flask
+from flask import jsonify
+from dotenv import load_dotenv
+
 import os
-# os.dream; .join; os/path(__magic?; use name).dri
-# install .env module to use as method; low.env 
 
 app = Flask(__name__)
+
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+# ^^^ links with env file; ^^^if fork, can run based off computer
 
 
 @app.route("/")
 def generate_epithets():
-    return f""
+    epithets = {"epithets": []}
+    return jsonify(epithets)
 
 
 @app.route("/vocabulary")
 def vocabulary():
-    pass
+    vocabulary = {"vocabulary": {}}
+    return jsonify(vocabulary)
