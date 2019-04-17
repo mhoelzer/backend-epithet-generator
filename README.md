@@ -29,3 +29,7 @@ This is getting things set up; there won't be a whole lot to display.
 8. `__init__.py` should be empty, `app.py` contains the app instance and routes for home and vocabulary, and and `helpers.py` and `test_helpers.py` are empty files.
 9. Development server successfully starts and serves defined routes with stubbed payloads.
 10. `FLASK_APP` and `FLASK_ENV` are obtained from environment variables set in `.env` file.
+
+---
+
+## Sprint B
