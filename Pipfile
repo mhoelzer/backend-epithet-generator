@@ -12,7 +12,7 @@ autopep8 = "*"
 [packages]
 flask = "*"
 python-dotenv = "*"
-flask-pytest = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.7"
