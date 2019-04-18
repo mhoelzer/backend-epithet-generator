@@ -19,17 +19,24 @@ Sprint|Description
 This is getting things set up; there won't be a whole lot to display.
 
 ### Rubric
-1. This criterion is linked to a Learning OutcomeRepository contains `.gitignore` file containing the requested sections of Github's default Python `.gitignore` file.
-2. Repository contains a `README.md` file describing the project.
-3. Repository does not contain virtualenv and other artifacts ignored in Github's default Python `.gitignore` file.
-4. Commit message of the initial commit briefly describes the intent of the project.
-5. Commit messages contain sufficient information to understand why changes were made.
-6. os.path module is used to build the path for the `.env` file.
-7. Both Pipfile and Pipfile.lock are committed.
-8. `__init__.py` should be empty, `app.py` contains the app instance and routes for home and vocabulary, and and `helpers.py` and `test_helpers.py` are empty files.
-9. Development server successfully starts and serves defined routes with stubbed payloads.
-10. `FLASK_APP` and `FLASK_ENV` are obtained from environment variables set in `.env` file.
+1. Repository contains `.gitignore` file containing the requested sections of GitHub's default Python `.gitignore` file.
+2. Repository does not contain virtualenv and other artifacts ignored in GitHub's default Python `.gitignore` file.
+3. Commit messages contain sufficient information to understand why changes were made.
+4. Both `Pipfile` and `Pipfile.lock` are committed.
+5. `__init__.py` should be empty, `app.py` contains the app instance and routes for home and vocabulary, and and `helpers.py` and `test_helpers.py` are empty files.
+6. Development server successfully starts and serves defined routes with stubbed payloads.
 
 ---
 
 ## Sprint B
+
+This is going to be using unit tests to test stuff that need to be tested with testing.
+
+### Rubric
+1. Unit test coverage. At least one happy & sad path test exists for each method of helper classes.
+2. Endpoints serve expected payloads.
+    - "/" route serves single epithet.
+    - "/vocabulary" route serves vocabulary dataset.
+    - "/epithets/<quantity>" route serves number of epithets specified by quantity.
+3. Application logic is decoupled from views. Views are limited to instantiating classes, initializing variables to be passed as parameters to helper classes, and returning JSON encoded payloads.
+4. Version Control: Every commit contains sufficient detail to understand why changes were made. 
