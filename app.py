@@ -16,6 +16,7 @@ import os
 
 app = Flask(__name__)
 
+# tells flask what name of file is but flask needs to find it; will need .env later but not right now
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 # ^^^ links with env file; ^^^if fork, can run based off computer
 # FLASK_APP = os.environ.get("FLASK_APP")
