@@ -11,7 +11,7 @@ __author__ = "mhoelzer"
 from flask import Flask
 from flask import jsonify
 # from dotenv import load_dotenv
-from .helpers import EpithetGenerator, Vocabulary
+from backend_epithet_generator.helpers import EpithetGenerator, Vocabulary
 # . does b/c it goes out to parent then back; changed where py looks; not where running but same dir where this is; relative import
 
 app = Flask(__name__)
