@@ -25,7 +25,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def generate_epithets():
-    result = EpithetGenerator().generate()
+    result = EpithetGenerator().generate_one()
     # epithets = {"epithets": result}
     return jsonify({"epithets": result})
 
@@ -34,5 +34,12 @@ def generate_epithets():
 def vocabulary():
     # vocabulary = {"vocabulary": {}}
     # return jsonify(vocabulary)
-    result = Vocabulary().read_json()
+    result = Vocabulary().read_json("resources/data.json")
     return jsonify({"vocabulary": result})
+
+
+@app.route("/epithets/<int:quantity>")
+def generate_multiple_epithets(quantity=1):
+    result = EpithetGenerator().generate_multi(quantity)
+    # epithets = {"epithets": result}
+    return jsonify({"epithets": result})
