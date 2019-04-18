@@ -34,7 +34,7 @@ def generate_epithets():
 def vocabulary():
     # vocabulary = {"vocabulary": {}}
     # return jsonify(vocabulary)
-    result = Vocabulary().read_json("resources/data.json")
+    result = Vocabulary.read_json("resources/data.json")
     return jsonify({"vocabulary": result})
 
 
