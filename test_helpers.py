@@ -4,7 +4,7 @@ from backend_epithet_generator.app import app
 # importing from inside app need the fodler.w/e
 
 from backend_epithet_generator.helpers import Vocabulary as V
-from .helpers import EpithetGenerator as EpG
+from backend_epithet_generator.helpers import EpithetGenerator as EpG
 
 json_data = V.read_json("resources/data.json")
 single_epi = EpG().generate_one()
