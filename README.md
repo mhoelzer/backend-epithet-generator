@@ -40,3 +40,15 @@ This is going to be using unit tests to test stuff that need to be tested with t
     - "/epithets/<quantity>" route serves number of epithets specified by quantity.
 3. Application logic is decoupled from views. Views are limited to instantiating classes, initializing variables to be passed as parameters to helper classes, and returning JSON encoded payloads.
 4. Version Control: Every commit contains sufficient detail to understand why changes were made. 
+
+---
+
+## Sprint C
+
+The final details and integration testing. 
+
+### Rubric
+1. Git commits have sufficient detail to explain why each change was made.
+2. Route added to serve a random number of epithets.
+3. Integration tests using the Flask test client exist for each route.
+4. `README` file that explains any important information about your submission.
