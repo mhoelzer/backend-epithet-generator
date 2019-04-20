@@ -17,21 +17,25 @@ class Vocabulary:
 
 
 class EpithetGenerator:
-    """"""
+    """
+    Handle creating and returning an epithet or multiple
+
+    Usage:
+        result = EpithetGenerator().generate_one()
+        OR
+        result = EpithetGenerator().generate_multi(quantity)
+    """
 
     def generate_one(self):
-        """"""
+        """Creates and delivers a single epithet to use against your enemy"""
         data = Vocabulary.read_json("resources/data.json")
-        return "{} {} {}!".format(random.choice(data["Column 1"]), random.choice(data["Column 2"]), random.choice(data["Column 3"]))
+        return "{} {} {}!".format(random.choice(data["Column 1"]),
+                                  random.choice(data["Column 2"]),
+                                  random.choice(data["Column 3"]))
 
     def generate_multi(self, quantity):
-        """"""
+        """Creates and delivers many epithets to use against your enemies"""
         multi_epithets_list = []
         for _ in range(quantity):
             multi_epithets_list.append(self.generate_one() + "!")
         return multi_epithets_list
-
-        # multi_epithets_dict = {}
-        # for num in range(quantity):
-        #     multi_epithets_dict[num + 1] = self.generate_one() + "!"
-        # return multi_epithets_dict
