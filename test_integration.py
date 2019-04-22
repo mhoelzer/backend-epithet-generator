@@ -1,5 +1,7 @@
 from backend_epithet_generator.app import app
 
+import json
+
 
 def test_app_gen_one():
     with app.test_client() as cli:
@@ -7,6 +9,8 @@ def test_app_gen_one():
         assert result.status_code == 200
         data = result.data.decode()
         assert isinstance(data, str)
+        jsonified_data = json.loads(data)
+        assert "!" in jsonified_data["epithets"]
 
 
 def test_app_vocab():
